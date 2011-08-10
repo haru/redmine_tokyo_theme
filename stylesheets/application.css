@@ -264,13 +264,13 @@ clear: none;
 }
 
 #footer {
-	background:#EEEEEE url(./footer.png) repeat-x scroll 0 0;
 	height: 25px;
-	color: #FFFFFF
+	background-color: #FFFFFF;
+        color: #444444;
 }
 
 #footer a{
-    color:#00FFFF;
+    color: #ff0000;
 
 }
 
