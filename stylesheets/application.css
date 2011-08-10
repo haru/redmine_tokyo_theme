@@ -37,7 +37,7 @@ tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
 }
 #main-menu{
     position: absolute;
-    margin: 13px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
 /*
     margin-top: 23px;
     margin-left: 0px;
@@ -49,15 +49,17 @@ tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
     float: left;
 */
     position:relative;
-    background-color:#EEEEEE;
+    background-color:#FFFFFF;
     width: 148px;
     min-height: 600px;
     height: auto !important;  
-    height: 600px;  
+    height: 600px;
+    /*
     border-left: 2px solid #DCDCDC;
     border-top: 2px solid #F5F5F5;
     border-bottom: 2px solid #C0C0C0;
     border-right: 2px solid #C0C0C0;
+    */
     font-family:'メイリオ',Verdana,sans-serif;
     
 }
@@ -68,21 +70,14 @@ tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
     color:black;
 */
     color: #2F4F4F;
-    border-bottom:1px solid #C0C0C0;
-    border-right:1px solid #C0C0C0;
-/*
-    border-top:1px solid #F5F5F5;
-*/
-    border-top:1px solid #FFFFFF;
-    border-left:1px solid #F5F5F5;
     display:block;
-    background-color:#EEEEEE;
-    background-image: url(./sidemenu.png);
+    background-color:#FFFFFF;
 
     margin-right: 0px;
+
 height:22px;
 line-height:22px;
-padding:0 5px 0 10px;
+padding:0 10px 0 20px;
 font-weight: normal; 
 
 }
@@ -90,10 +85,6 @@ font-weight: normal;
 
 
 #header #main-menu a.selected, #header #main-menu li a.selected:hover {
-    border-top:1px solid #C0C0C0;
-    border-bottom:1px solid #F5F5F5;
-    border-right:1px solid #F5F5F5;
-    border-left:1px solid #C0C0C0;
     background-color:#F5F5F5;
     background-image: none;
 /*
