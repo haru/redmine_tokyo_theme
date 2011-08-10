@@ -337,25 +337,11 @@ border-bottom-color: #a0a0a0;
     margin-left:0px;
 }
 
-/*
-#top-menu {
-    border-top: 1px solid #4e77a4;
-    border-bottom: 1px solid #21282f;
-    padding: 0px;
-    height: 2.0em;
+#main #content {
+ -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-width: 1px;
+border-color: #c0c0c0;
+border-style: solid;
+margin-bottom: 1px;
 }
-#top-menu li {
-    border-left: 1px solid #4e77a4;
-    border-right: 1px solid #21282f;
-    height: 2.0em;
-    padding: 0px;
-    text-align: bottom;
-}
-#top-menu li a{
-    height: 2.0em;
-    margin-top: 6px;
-    margin-bottom: 0px;
-    padding-top: 6px;
-    margin-left: 4px;
-}
-*/
