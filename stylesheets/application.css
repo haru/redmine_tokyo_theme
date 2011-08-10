@@ -1,0 +1,370 @@
+@import url(../../../stylesheets/application.css);
+
+
+tr.odd.priority-5, table.list tbody tr.odd.priority-5:hover { color:
+#900; font-weight: bold; }
+tr.odd.priority-5 { background: #ffc4c4; }
+tr.even.priority-5, table.list tbody tr.even.priority-5:hover { color:
+#900; font-weight: bold; }
+tr.even.priority-5 { background: #ffd4d4; }
+tr.priority-5 a, tr.priority-5:hover a { color: #900; }
+tr.odd.priority-5 td, tr.even.priority-5 td { border-color: #ffb4b4; }
+
+tr.odd.priority-4, table.list tbody tr.odd.priority-4:hover { color: #900; }
+tr.odd.priority-4 { background: #ffc4c4; }
+tr.even.priority-4, table.list tbody tr.even.priority-4:hover { color: #900; }
+tr.even.priority-4 { background: #ffd4d4; }
+tr.priority-4 a { color: #900; }
+tr.odd.priority-4 td, tr.even.priority-4 td { border-color: #ffb4b4; }
+
+tr.odd.priority-3, table.list tbody tr.odd.priority-3:hover { color: #900; }
+tr.odd.priority-3 { background: #fee; }
+tr.even.priority-3, table.list tbody tr.even.priority-3:hover { color: #900; }
+tr.even.priority-3 { background: #fff2f2; }
+
+tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #fcc; }
+
+tr.odd.priority-1, table.list tbody tr.odd.priority-1:hover { color: #559; }
+tr.odd.priority-1 { background: #eaf7ff; }
+tr.even.priority-1, table.list tbody tr.even.priority-1:hover { color: #559; }
+tr.even.priority-1 { background: #f2faff; }
+tr.priority-1 a { color: #559; }
+tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
+
+
+#header {
+    z-index: 0;
+}
+#main-menu{
+    position: absolute;
+    margin: 13px 0px 0px 0px;
+/*
+    margin-top: 23px;
+    margin-left: 0px;
+    margin-right: 0px;
+*/
+    padding-left: 0px;
+    left: 0px;
+/*
+    float: left;
+*/
+    position:relative;
+    background-color:#EEEEEE;
+    width: 148px;
+    min-height: 600px;
+    height: auto !important;  
+    height: 600px;  
+    border-left: 2px solid #DCDCDC;
+    border-top: 2px solid #F5F5F5;
+    border-bottom: 2px solid #C0C0C0;
+    border-right: 2px solid #C0C0C0;
+    font-family:'メイリオ',Verdana,sans-serif;
+    
+}
+
+#header #main-menu a{
+/*
+    color:#2A5685;
+    color:black;
+*/
+    color: #2F4F4F;
+    border-bottom:1px solid #C0C0C0;
+    border-right:1px solid #C0C0C0;
+/*
+    border-top:1px solid #F5F5F5;
+*/
+    border-top:1px solid #FFFFFF;
+    border-left:1px solid #F5F5F5;
+    display:block;
+    background-color:#EEEEEE;
+    background-image: url(./sidemenu.png);
+
+    margin-right: 0px;
+height:22px;
+line-height:22px;
+padding:0 5px 0 10px;
+font-weight: normal; 
+
+}
+
+
+
+#header #main-menu a.selected, #header #main-menu li a.selected:hover {
+    border-top:1px solid #C0C0C0;
+    border-bottom:1px solid #F5F5F5;
+    border-right:1px solid #F5F5F5;
+    border-left:1px solid #C0C0C0;
+    background-color:#F5F5F5;
+    background-image: none;
+/*
+    color:#4169E1;
+*/
+font-weight: bold; 
+
+}
+#header #main-menu a:hover{
+    color:#1E90FF;
+font-weight: bold; 
+}
+
+#header {
+    margin-left: 0px;
+    padding-left: 0px;
+    height: 5em;
+}
+
+
+
+#main {
+    margin-left: 150px;
+}
+
+#main-menu ul{
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+#main-menu li{
+    float: none;
+    margin: 0 0 0 0;
+}
+
+
+.tabular p {
+clear: none;
+}
+
+div#activity dt, #search-results dt {
+clear: none;
+
+}
+
+tr.issue {
+	white-space: normal;
+}
+
+#activity dt, .journal {
+	clear:none;
+}
+
+#header {
+	background: #ffffff url(./title.png) repeat-x;
+
+}
+
+p.progress-info {
+	clear: none;
+}
+
+
+* html #main{
+    position: relative;
+
+    margin-top: -600px;
+
+    margin-left: 157px;
+    z-index: 10;
+    background-color:
+
+}
+
+* html #content{
+    z-index: 11;
+}
+* html #sidebar{
+    z-index: 30;
+}
+
+* html #header #main-menu{
+    margin-top: 26px;
+}
+
+
+p.progress-info {
+    clear: none;
+}
+table.progress {
+    border: 1px solid dimgray;
+}
+table.progress td.closed {
+        background:#BAE0BA url(./progress.png) repeat scroll 0 50%;
+}
+
+table.progress td.done {
+        background:#DEF0DE url(./progress-half.png) repeat scroll 0 50%;
+        border-right: 1px solid gray;
+}
+
+table.progress td.todo {
+        background:#ffffff url(./progress-none.png) repeat scroll 0 50%;
+}
+
+.wiki h1{
+    background-image: url(./h1.png);
+    background-position:0 40%;
+    background-repeat:no-repeat;
+    padding-bottom:3px;
+    padding-left:20px;
+    padding-top:2px;
+    border-bottom:0px none;
+    font-size: 24px;
+    line-height: 2em;
+}
+
+.wiki h2{
+    background-image: url(./h1.png);
+    background-position:0 40%;
+    background-repeat:no-repeat;
+    padding-bottom:3px;
+    padding-left:20px;
+    padding-top:2px;
+    border-bottom:0px none;
+    line-height: 1.5em;
+}
+
+.wiki p{
+    margin-left: 20px;
+}
+
+
+
+.wiki ul li{
+    list-style-image: url(./li.png)
+}
+
+table.list th {
+    background: #EEEEEE url(./th.png) repeat;
+}
+
+#header h1{
+    padding-left: 4px;
+    padding-left:60px;
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    /*
+    font-size: 22px;
+    */
+    height: 27px;
+    color: #444444;
+}
+
+* html #header h1{
+    height: 15px;
+}
+
+. update {
+clear: none;
+}
+
+#sidebar {
+    background-color:#EEEEEE;
+    height: auto !important;  
+    height: 600px;  
+}
+
+.task_late {
+	background:#FF6666 url(./gantt-red.png) repeat 
+}
+.task_done {
+	background:#FF6666 url(./gantt-blue.png) repeat 
+}
+.task_todo {
+	background:#FF6666 url(./gantt-gray.png) repeat 
+}
+
+#footer {
+	background:#EEEEEE url(./footer.png) repeat-x scroll 0 0;
+	height: 25px;
+	color: #FFFFFF
+}
+
+#footer a{
+    color:#00FFFF;
+
+}
+
+div.wiki ul.toc li{
+	list-style-image: none;
+}
+
+div.wiki ul.toc li.heading1{
+	margin-left: 15px;
+	list-style-type: disc;
+}
+
+div.wiki ul.toc li.heading2{
+	margin-left: 25px;
+	list-style-type: circle;
+}
+div.wiki ul.toc li.heading3{
+	margin-left: 35px;
+	list-style-type: circle;
+}
+
+.wiki table th {
+    background: #EEEEEE url(./th.png) repeat;
+}
+
+h1, h2, h3, h4 {
+font-family:'メイリオ', "Trebuchet MS",Verdana,sans-serif;
+text-shadow: 2px 2px 2px #808080;
+}
+
+pre {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+}
+
+div.wiki ul.toc {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-right-width: 3px;
+border-right-color: #c0c0c0;
+border-bottom-width: 3px;
+border-bottom-color: #c0c0c0;
+}
+
+div.box {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-right-width: 3px;
+border-right-color: #c0c0c0;
+border-bottom-width: 3px;
+border-bottom-color: #c0c0c0;
+}
+
+div.issue {
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-right-width: 3px;
+border-right-color: #a0a0a0;
+border-bottom-width: 3px;
+border-bottom-color: #a0a0a0;
+}
+
+#main.no-main-menu {
+    margin-left:0px;
+}
+
+/*
+#top-menu {
+    border-top: 1px solid #4e77a4;
+    border-bottom: 1px solid #21282f;
+    padding: 0px;
+    height: 2.0em;
+}
+#top-menu li {
+    border-left: 1px solid #4e77a4;
+    border-right: 1px solid #21282f;
+    height: 2.0em;
+    padding: 0px;
+    text-align: bottom;
+}
+#top-menu li a{
+    height: 2.0em;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    padding-top: 6px;
+    margin-left: 4px;
+}
+*/
