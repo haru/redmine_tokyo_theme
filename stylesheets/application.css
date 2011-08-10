@@ -352,4 +352,13 @@ div.issue {
 
 #top-menu {
     background-color: #000000;
+    height: 1.8em;
+    font-size: 1em;
+
+#top-menu a {
+    color: #EEEEEE;
+}
+
+#top-menu #loggedas {
+    color: #EEEEEE;
 }
