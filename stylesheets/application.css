@@ -69,10 +69,6 @@ tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
 }
 
 #header #main-menu a{
-    /*
-        color:#2A5685;
-        color:black;
-    */
     color: #2F4F4F;
     display:block;
     background-color:#FFFFFF;
@@ -81,16 +77,17 @@ tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
 
     height:22px;
     line-height:22px;
-    padding:0 10px 0 20px;
+    padding:0 10px 0 30px;
     font-weight: normal;
+    background-repeat: no-repeat;
+    background-position: 10px;
 
 }
 
 
 
 #header #main-menu a.selected, #header #main-menu li a.selected:hover {
-    background-color:#F5F5F5;
-    background-image: none;
+    background-color: #c0c0c0;
     /*
         color:#4169E1;
     */
@@ -158,7 +155,6 @@ p.progress-info {
 
     margin-left: 157px;
     z-index: 10;
-    background-color:
 
 }
 
@@ -354,11 +350,40 @@ div.issue {
     background-color: #000000;
     height: 1.8em;
     font-size: 1em;
+}
 
-#top-menu a {
+#top-menu {
     color: #EEEEEE;
 }
 
 #top-menu #loggedas {
     color: #EEEEEE;
+}
+
+#header #main-menu ul li a.issues {
+    background-image: url("../../../images/ticket.png");
+}
+
+#header #main-menu ul li a.boards {
+    background-image: url("../../../images/message.png");
+}
+
+#header #main-menu ul li a.calendar {
+    background-image: url("../../../images/calendar.png");
+}
+
+#header #main-menu ul li a.news {
+    background-image: url("../../../images/news.png");
+}
+
+#header #main-menu ul li a.new-issue {
+    background-image: url("../../../images/ticket_edit.png");
+}
+
+#header #main-menu ul li a.activity {
+    background-image: url("../../../images/report.png");
+}
+
+#header #main-menu ul li a.settings {
+    background-image: url("../../../images/changeset.png");
 }
