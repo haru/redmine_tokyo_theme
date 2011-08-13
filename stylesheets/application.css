@@ -407,3 +407,7 @@ div.issue {
 #header #main-menu ul li a.documents {
     background-image: url("../../../images/document.png");
 }
+
+#header #main-menu ul li a.roadmap {
+    background-image: url("../../../images/package.png");
+}
