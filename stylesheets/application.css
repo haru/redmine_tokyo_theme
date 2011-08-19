@@ -308,11 +308,13 @@ h1, h2, h3, h4 {
 pre {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 div.wiki ul.toc {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    border-radius: 5px;
     border-right-width: 3px;
     border-right-color: #c0c0c0;
     border-bottom-width: 3px;
@@ -322,6 +324,7 @@ div.wiki ul.toc {
 div.box {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    border-radius: 5px;
     border-right-width: 3px;
     border-right-color: #c0c0c0;
     border-bottom-width: 3px;
@@ -331,6 +334,7 @@ div.box {
 div.issue {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
+    border-radius: 5px;
     border-right-width: 3px;
     border-right-color: #a0a0a0;
     border-bottom-width: 3px;
@@ -344,6 +348,7 @@ div.issue {
 #main #content {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    border-radius: 5px;
     border-width: 1px;
     border-color: #c0c0c0;
     border-style: solid;
