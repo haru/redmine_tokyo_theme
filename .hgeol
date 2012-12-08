@@ -1,0 +1,3 @@
+[patterns]
+**.css = NATIVE
+**.js = NATIVE
