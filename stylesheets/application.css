@@ -41,7 +41,7 @@ tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #add7f3; }
 }
 #main-menu{
     position: absolute;
-    margin: 25px 0px 0px 0px;
+    margin: 52px 0px 0px 0px;
     /*
         margin-top: 23px;
         margin-left: 0px;
@@ -243,17 +243,30 @@ table.list th {
 }
 
 #header h1{
-    padding-left: 4px;
+
     padding-left:60px;
-    margin-top: 12px;
+    margin-top: 0px;
     margin-left: 5px;
     margin-bottom: 0px;
     /*
     font-size: 22px;
     */
-    height: 27px;
+    height: 44px;
     color: #444444;
+    white-space: normal;
+    padding-top: 0px;
+    bottom: 0px;
+
 }
+
+#header h1 .breadcrumbs{
+    font-size: 0.4em;
+}
+
+#header h1 .current-project {
+    margin-bottom: 0px;
+}
+
 
 * html #header h1{
     height: 15px;
