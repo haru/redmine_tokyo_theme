@@ -120,10 +120,20 @@ tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #add7f3; }
 #main-menu ul{
     margin-top: 0px;
     padding-bottom: 10px;
+        white-space: normal;
+    display: block;
+}
+
+#main-menu div.tabs-buttons button{
+    display: none;
+
 }
 #main-menu li{
     float: none;
     margin: 0 0 0 0;
+    white-space: normal;
+    display: block;
+
 }
 
 
@@ -249,9 +259,6 @@ table.list th {
     height: 15px;
 }
 
-. update {
-    clear: none;
-}
 
 #sidebar {
     background-color:#EEEEEE;
