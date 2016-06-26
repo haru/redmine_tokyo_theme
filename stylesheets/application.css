@@ -41,7 +41,7 @@ tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #add7f3; }
 }
 #main-menu{
     position: absolute;
-    margin: 52px 0px 0px 0px;
+    margin:15px 0px 0px 0px;
     /*
         margin-top: 23px;
         margin-left: 0px;
