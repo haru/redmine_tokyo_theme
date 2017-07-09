@@ -33,7 +33,7 @@ tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #add7f3; }
 
 
 #header {
-    z-index: 0;
+    z-index: 30;
 }
 
 #header a {
