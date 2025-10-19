@@ -815,9 +815,10 @@ h1, h2, h3, h4 {
 }
 
 .tabs a {
-    border-radius: 999px;
+    border-radius: 999px 999px 0 0;
     padding: 8px 16px;
     transition: background 160ms ease, color 160ms ease;
+    border-bottom: 3px solid transparent;
 }
 
 #content .tabs ul li a,
@@ -825,6 +826,12 @@ h1, h2, h3, h4 {
     border: none;
     background: transparent;
     color: var(--md-text-muted);
+}
+
+#content .tabs ul li a.selected {
+    border-bottom: 3px solid var(--md-primary);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 table.list {
