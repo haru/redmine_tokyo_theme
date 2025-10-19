@@ -826,6 +826,7 @@ h1, h2, h3, h4 {
     border: none;
     background: transparent;
     color: var(--md-text-muted);
+    padding-bottom: 6px;
 }
 
 #content .tabs ul li a.selected {
