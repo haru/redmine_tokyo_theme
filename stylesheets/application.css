@@ -261,37 +261,6 @@ table.list th {
     background: #EEEEEE url(./th.png) repeat;
 }
 
-#header h1{
-
-    padding-left:60px;
-    margin-top: 0px;
-    margin-left: 5px;
-    margin-bottom: 0px;
-    /*
-    font-size: 22px;
-    */
-    height: 44px;
-    color: #444444;
-    white-space: normal;
-    padding-top: 0px;
-    bottom: 0px;
-
-}
-
-#header h1 .breadcrumbs{
-    font-size: 0.4em;
-}
-
-#header h1 .current-project {
-    margin-bottom: 0px;
-}
-
-
-* html #header h1{
-    height: 15px;
-}
-
-
 #sidebar {
     background-color:#EEEEEE;
     height: auto !important;
@@ -508,18 +477,31 @@ body {
     background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(237,241,247,0.94));
     border-bottom: 1px solid var(--md-border);
     box-shadow: var(--md-shadow-sm);
-    padding: 28px 28px 20px 28px;
+    padding: 10px 28px 8px 16px;
     height: auto;
     position: relative;
 }
 
 #header h1 {
-    margin: 0 0 0 220px;
+    margin: 0;
     font-family: "Roboto","Noto Sans JP",sans-serif;
     font-weight: 600;
     font-size: 24px;
     color: var(--md-text);
     text-shadow: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: auto;
+}
+
+#header h1::before {
+    content: "";
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+    background: url("./logo.png") no-repeat center/contain;
 }
 
 #header h1 .breadcrumbs {
@@ -527,10 +509,14 @@ body {
     color: var(--md-text-muted);
 }
 
+#header h1 .current-project {
+    margin: 0;
+}
+
 #main-menu {
     position: absolute;
     top: 112px;
-    left: 28px;
+    left: 16px;
     width: 210px;
     background: transparent;
     border: none;
