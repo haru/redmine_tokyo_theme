@@ -826,6 +826,11 @@ h1, h2, h3, h4 {
     color: #fff;
 }
 
+#content .tabs ul li a,
+#content .tabs ul li a.selected {
+    border: none;
+}
+
 table.list {
     border: 1px solid var(--md-border);
     border-radius: 14px;
