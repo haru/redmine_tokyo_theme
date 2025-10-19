@@ -581,7 +581,7 @@ body {
 }
 
 #main {
-    margin-left: 270px;
+    margin-left: 248px;
     padding: 32px 28px 40px;
 }
 
@@ -590,11 +590,9 @@ body {
 }
 
 #main #content,
-#sidebar,
 div.box,
 div.issue,
 .wiki .box,
-.sidebar-box,
 div.journal {
     background: var(--md-surface-alt);
     border: 1px solid var(--md-border);
@@ -604,8 +602,26 @@ div.journal {
 }
 
 #sidebar {
-    background: var(--md-surface-alt);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
     min-height: auto;
+    margin-left: 32px;
+}
+
+#sidebar .sidebar-box {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 960px) {
+    #sidebar {
+        margin-left: 0;
+    }
 }
 
 div.issue {
