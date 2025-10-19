@@ -571,11 +571,12 @@ body {
 
 #header #main-menu a.selected,
 #header #main-menu li a.selected:hover {
-    background: transparent;
-    color: var(--md-primary);
+    background-color: rgba(25, 118, 210, 0.18);
+    color: var(--md-primary-dark);
     border: none;
-    box-shadow: none;
+    box-shadow: inset 3px 0 0 var(--md-primary);
     font-weight: 600;
+    border-radius: 12px;
 }
 
 #main {
