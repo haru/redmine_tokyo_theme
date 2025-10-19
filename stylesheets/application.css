@@ -532,11 +532,11 @@ body {
     top: 96px;
     left: 28px;
     width: 210px;
-    background: var(--md-surface-alt);
-    border: 1px solid var(--md-border);
-    border-radius: 18px;
-    padding: 18px 0 22px;
-    box-shadow: var(--md-shadow-md);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
     min-height: auto;
     height: auto;
     margin: 0;
@@ -548,32 +548,34 @@ body {
 }
 
 #main-menu li {
-    margin: 0 0 6px;
+    margin: 0 0 8px;
+    list-style: none;
 }
 
 #header #main-menu a {
     color: var(--md-text);
-    padding: 10px 18px 10px 48px;
+    padding: 6px 10px 6px 42px;
     font-weight: 500;
-    border-radius: 0 16px 16px 0;
-    border-left: 3px solid transparent;
-    transition: background 160ms ease, color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    border-left: none;
+    transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
     background-position: 18px center;
+    background-color: transparent;
 }
 
 #header #main-menu a:hover,
 #header #main-menu li a:hover {
     background-color: rgba(25, 118, 210, 0.08);
     color: var(--md-primary);
-    border-color: rgba(25, 118, 210, 0.6);
+    box-shadow: none;
 }
 
 #header #main-menu a.selected,
 #header #main-menu li a.selected:hover {
-    background: linear-gradient(90deg, var(--md-primary), var(--md-primary-dark));
-    color: #fff;
-    border-color: transparent;
-    box-shadow: var(--md-shadow-sm);
+    background: transparent;
+    color: var(--md-primary);
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
 }
 
 #main {
