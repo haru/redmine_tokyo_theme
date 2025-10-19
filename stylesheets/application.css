@@ -202,8 +202,7 @@ tr.issue {
 }
 
 #header {
-    background: #ffffff url(./title.png) repeat-x;
-
+    background: #ffffff;
 }
 
 p.progress-info {
@@ -240,38 +239,34 @@ table.progress {
     border: 1px solid dimgray;
 }
 table.progress td.closed {
-    background:#BAE0BA url(./progress.png) repeat scroll 0 50%;
+    background:#BAE0BA;
 }
 
 table.progress td.done {
-    background:#DEF0DE url(./progress-half.png) repeat scroll 0 50%;
+    background:#DEF0DE;
     border-right: 1px solid gray;
 }
 
 table.progress td.todo {
-    background:#ffffff url(./progress-none.png) repeat scroll 0 50%;
+    background:#ffffff;
 }
 
 .wiki h1{
-    background-image: url(./h1.png);
-    background-position:0 40%;
-    background-repeat:no-repeat;
+    background: none;
     padding-bottom:3px;
-    padding-left:20px;
+    padding-left:0;
     padding-top:2px;
-    border-bottom:0px none;
+    border-bottom:0;
     font-size: 24px;
     line-height: 2em;
 }
 
 .wiki h2{
-    background-image: url(./h1.png);
-    background-position:0 40%;
-    background-repeat:no-repeat;
+    background: none;
     padding-bottom:3px;
-    padding-left:20px;
+    padding-left:0;
     padding-top:2px;
-    border-bottom:0px none;
+    border-bottom:0;
     line-height: 1.5em;
 }
 
@@ -282,11 +277,11 @@ table.progress td.todo {
 
 
 .wiki ul li{
-    list-style-image: url(./li.png)
+    list-style-image: none;
 }
 
 table.list th {
-    background: #EEEEEE url(./th.png) repeat;
+    background: #EEEEEE;
 }
 
 #sidebar {
@@ -296,13 +291,13 @@ table.list th {
 }
 
 .task_late {
-    background:#FF6666 url(./gantt-red.png) repeat
+    background:#FF6666;
 }
 .task_done {
-    background:#FF6666 url(./gantt-blue.png) repeat
+    background:#92C5FF;
 }
 .task_todo {
-    background:#FF6666 url(./gantt-gray.png) repeat
+    background:#B8B8B8;
 }
 
 #footer {
@@ -335,7 +330,7 @@ div.wiki ul.toc li.heading3{
 }
 
 .wiki table th {
-    background: #EEEEEE url(./th.png) repeat;
+    background: #EEEEEE;
 }
 
 h1, h2, h3, h4 {
@@ -926,10 +921,23 @@ select:focus {
 .wiki h1,
 .wiki h2 {
     background: transparent;
-    padding-left: 0;
-    border-left: 4px solid var(--md-primary);
+    padding-left: 16px;
     padding-bottom: 4px;
     padding-top: 4px;
+    position: relative;
+}
+
+.wiki h1::before,
+.wiki h2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 1.12em;
+    border-radius: 2px;
+    background: var(--md-primary);
 }
 
 .wiki ul li {
