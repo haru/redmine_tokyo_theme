@@ -582,7 +582,7 @@ body {
 
 #main {
     margin-left: 248px;
-    padding: 32px 28px 40px;
+    padding: 32px 28px 28px;
 }
 
 #main.no-main-menu {
@@ -815,7 +815,7 @@ select:focus {
     background: transparent;
     color: var(--md-text-muted);
     border-top: 1px solid var(--md-border);
-    margin-top: 40px;
+    margin-top: 8px;
     padding: 16px 0;
 }
 
