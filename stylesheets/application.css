@@ -966,9 +966,20 @@ table.list th {
     padding: 10px 16px;
 }
 
+table.issues th {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 table.list td {
     border-bottom: 1px solid var(--md-divider);
     padding: 12px 16px;
+}
+
+/* Issue List */
+table.issues td {
+    padding-left: 2px;
+    padding-right: 9px;
 }
 
 table.list tbody tr:nth-child(even) td {
