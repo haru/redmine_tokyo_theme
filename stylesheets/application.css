@@ -816,6 +816,10 @@ div.journal {
     padding: 22px 26px;
 }
 
+div.box {
+    background-color: #f5f8ff;
+}
+
 div.issue {
     background-color: #fffce6;
     margin-bottom: 30px;
