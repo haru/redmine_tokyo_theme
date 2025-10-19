@@ -718,6 +718,27 @@ div.journal {
     padding: 22px 26px;
 }
 
+#content > h2 {
+    position: relative;
+    margin: 0 0 20px;
+    padding-left: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--md-text);
+}
+
+#content > h2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 1.12em;
+    border-radius: 2px;
+    background: var(--md-primary);
+}
+
 #sidebar {
     background: transparent;
     border: none;
