@@ -922,12 +922,19 @@ h4 {
     border-bottom: 3px solid transparent;
 }
 
-#content .tabs ul li a,
-#content .tabs ul li a.selected {
+#content .tabs ul li a {
     border: none;
     background: transparent;
     color: var(--md-text-muted);
     padding-bottom: 6px;
+}
+
+#content .tabs ul li a.selected {
+    background: transparent;
+    border: none;
+    color: var(--md-primary);
+    border-bottom: 3px solid var(--md-primary);
+    font-weight: 600;
 }
 
 #main-menu .menu-children li a {
