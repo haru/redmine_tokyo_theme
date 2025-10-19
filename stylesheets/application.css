@@ -881,6 +881,11 @@ div.issue {
     border-color: var(--md-divider);
 }
 
+.contextual {
+    position: relative;
+    z-index: 5;
+}
+
 .contextual a,
 .contextual .icon {
     border-radius: 999px;
