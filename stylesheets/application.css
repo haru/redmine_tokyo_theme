@@ -88,20 +88,48 @@ tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #add7f3; }
 
 #header #main-menu a{
     color: #2F4F4F;
-    display:block;
+    display:flex;
+    align-items: center;
+    gap: 10px;
     background-color:#FFFFFF;
-
     margin-right: 0px;
     margin-left: 1px;
-
     height:22px;
     line-height:22px;
-    padding:0 10px 0 30px;
+    padding:0 12px;
     font-weight: normal;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    background-size: 16px 16px;
+}
 
+#header #main-menu a::before {
+    content:"";
+    display:none;
+    width:18px;
+    height:18px;
+    background-color: currentColor;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:16px 16px;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-position:center;
+    mask-position:center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    opacity:1;
+}
+
+#header #main-menu a:hover::before,
+#header #main-menu a.selected::before {
+    opacity: 1;
+}
+
+#header #main-menu a.new-object{
+    justify-content: center;
+    gap: 0;
+}
+
+#header #main-menu a.new-object::before {
+    display:none;
 }
 
 
@@ -379,53 +407,161 @@ div.issue {
     color: #EEEEEE;
 }
 
-/* SVGアイコン置き換え（PNGフォールバック） */
-#header #main-menu ul li a.issues {
-    background-image: url("../../../images/ticket.svg"), url("../../../images/ticket.png");
+/* メインメニュー用SVGアイコン（テーマ内アセット） */
+#header #main-menu ul li a.overview::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/overview.svg");
+    mask-image: url("./icons/overview.svg");
 }
 
-#header #main-menu ul li a.boards {
-    background-image: url("../../../images/message.svg"), url("../../../images/message.png");
+#header #main-menu ul li a.activity::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/activity.svg");
+    mask-image: url("./icons/activity.svg");
 }
 
-#header #main-menu ul li a.calendar {
-    background-image: url("../../../images/calendar.svg"), url("../../../images/calendar.png");
+#header #main-menu ul li a.issues::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/issues.svg");
+    mask-image: url("./icons/issues.svg");
 }
 
-#header #main-menu ul li a.news {
-    background-image: url("../../../images/news.svg"), url("../../../images/news.png");
+#header #main-menu ul li a.time-entries::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/time-entries.svg");
+    mask-image: url("./icons/time-entries.svg");
 }
 
-#header #main-menu ul li a.new-issue {
-    background-image: url("../../../images/ticket_edit.svg"), url("../../../images/ticket_edit.png");
+#header #main-menu ul li a.gantt::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/gantt.svg");
+    mask-image: url("./icons/gantt.svg");
 }
 
-#header #main-menu ul li a.activity {
-    background-image: url("../../../images/report.svg"), url("../../../images/report.png");
+#header #main-menu ul li a.calendar::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/calendar.svg");
+    mask-image: url("./icons/calendar.svg");
 }
 
-#header #main-menu ul li a.settings {
-    background-image: url("../../../images/changeset.svg"), url("../../../images/changeset.png");
+#header #main-menu ul li a.news::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/news.svg");
+    mask-image: url("./icons/news.svg");
 }
 
-#header #main-menu ul li a.overview {
-    background-image: url("../../../images/projects.svg"), url("../../../images/projects.png");
+#header #main-menu ul li a.documents::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/documents.svg");
+    mask-image: url("./icons/documents.svg");
 }
 
-#header #main-menu ul li a.files {
-    background-image: url("../../../images/save.svg"), url("../../../images/save.png");
+#header #main-menu ul li a.wiki::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/wiki.svg");
+    mask-image: url("./icons/wiki.svg");
 }
 
-#header #main-menu ul li a.wiki {
-    background-image: url("../../../images/table_multiple.svg"), url("../../../images/table_multiple.png");
+#header #main-menu ul li a.files::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/files.svg");
+    mask-image: url("./icons/files.svg");
 }
 
-#header #main-menu ul li a.documents {
-    background-image: url("../../../images/document.svg"), url("../../../images/document.png");
+#header #main-menu ul li a.settings::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/settings.svg");
+    mask-image: url("./icons/settings.svg");
 }
 
-#header #main-menu ul li a.roadmap {
-    background-image: url("../../../images/package.svg"), url("../../../images/package.png");
+#header #main-menu ul li a.boards::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/boards.svg");
+    mask-image: url("./icons/boards.svg");
+}
+
+#header #main-menu ul li a.roadmap::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/roadmap.svg");
+    mask-image: url("./icons/roadmap.svg");
+}
+
+#header #main-menu ul li a.new-issue::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/new-issue.svg");
+    mask-image: url("./icons/new-issue.svg");
+}
+
+#header #main-menu ul li a.ai-helper-dashboard::before {
+    display:inline-block;
+    -webkit-mask-image: url("./icons/ai-helper-dashboard.svg");
+    mask-image: url("./icons/ai-helper-dashboard.svg");
+}
+
+@supports not ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
+    #header #main-menu a::before {
+        background-color: transparent;
+    }
+
+    #header #main-menu ul li a.overview::before {
+        background-image: url("./icons/overview.svg");
+    }
+
+    #header #main-menu ul li a.activity::before {
+        background-image: url("./icons/activity.svg");
+    }
+
+    #header #main-menu ul li a.issues::before {
+        background-image: url("./icons/issues.svg");
+    }
+
+    #header #main-menu ul li a.time-entries::before {
+        background-image: url("./icons/time-entries.svg");
+    }
+
+    #header #main-menu ul li a.gantt::before {
+        background-image: url("./icons/gantt.svg");
+    }
+
+    #header #main-menu ul li a.calendar::before {
+        background-image: url("./icons/calendar.svg");
+    }
+
+    #header #main-menu ul li a.news::before {
+        background-image: url("./icons/news.svg");
+    }
+
+    #header #main-menu ul li a.documents::before {
+        background-image: url("./icons/documents.svg");
+    }
+
+    #header #main-menu ul li a.wiki::before {
+        background-image: url("./icons/wiki.svg");
+    }
+
+    #header #main-menu ul li a.files::before {
+        background-image: url("./icons/files.svg");
+    }
+
+    #header #main-menu ul li a.settings::before {
+        background-image: url("./icons/settings.svg");
+    }
+
+    #header #main-menu ul li a.boards::before {
+        background-image: url("./icons/boards.svg");
+    }
+
+    #header #main-menu ul li a.roadmap::before {
+        background-image: url("./icons/roadmap.svg");
+    }
+
+    #header #main-menu ul li a.new-issue::before {
+        background-image: url("./icons/new-issue.svg");
+    }
+
+    #header #main-menu ul li a.ai-helper-dashboard::before {
+        background-image: url("./icons/ai-helper-dashboard.svg");
+    }
 }
 
 .mobile-mode #header {
