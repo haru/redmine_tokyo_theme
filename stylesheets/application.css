@@ -816,6 +816,11 @@ div.journal {
     padding: 22px 26px;
 }
 
+div.issue {
+    background-color: #fffce6;
+    margin-bottom: 30px;
+}
+
 #content>h2 {
     position: relative;
     margin: 0 0 20px;
