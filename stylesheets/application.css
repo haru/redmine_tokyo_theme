@@ -529,7 +529,7 @@ body {
 
 #main-menu {
     position: absolute;
-    top: 96px;
+    top: 112px;
     left: 28px;
     width: 210px;
     background: transparent;
@@ -556,6 +556,7 @@ body {
     color: var(--md-text);
     padding: 6px 10px 6px 42px;
     font-weight: 500;
+    font-size: 15px;
     border-left: none;
     transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
     background-position: 18px center;
