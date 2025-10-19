@@ -1011,11 +1011,17 @@ button,
 input[type="submit"],
 input[type="button"],
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: 1.2;
     background: linear-gradient(135deg, var(--md-primary), var(--md-primary-dark));
     color: #fff;
     border: none;
     border-radius: 999px;
-    padding: 8px 20px;
+    padding: 6px 20px 8px;
     font-weight: 600;
     cursor: pointer;
     box-shadow: var(--md-shadow-sm);
