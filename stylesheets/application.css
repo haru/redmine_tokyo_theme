@@ -817,18 +817,14 @@ h1, h2, h3, h4 {
 .tabs a {
     border-radius: 999px;
     padding: 8px 16px;
-    color: var(--md-text-muted);
     transition: background 160ms ease, color 160ms ease;
-}
-
-.tabs a.selected {
-    background: linear-gradient(135deg, var(--md-primary), var(--md-primary-dark));
-    color: #fff;
 }
 
 #content .tabs ul li a,
 #content .tabs ul li a.selected {
     border: none;
+    background: transparent;
+    color: var(--md-text-muted);
 }
 
 table.list {
