@@ -783,6 +783,7 @@ body {
     background-color: rgba(25, 118, 210, 0.08);
     color: var(--md-primary);
     box-shadow: none;
+    border-radius: 12px;
 }
 
 #header #main-menu a.selected,
@@ -790,7 +791,7 @@ body {
     background-color: rgba(25, 118, 210, 0.18);
     color: var(--md-primary-dark);
     border: none;
-    box-shadow: inset 3px 0 0 var(--md-primary);
+    box-shadow: none;
     font-weight: 600;
     border-radius: 12px;
 }
