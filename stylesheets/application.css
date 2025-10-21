@@ -1028,11 +1028,15 @@ table.progress td {
 }
 
 table.list table.progress {
-    height: 1px;
+    height: 18px;
+    max-height: 18px;
 }
 
 table.list table.progress td {
-    height: 1px;
+    height: 18px;
+    max-height: 18px;
+    padding: 0;
+    line-height: 18px;
 }
 
 table.progress td.closed {
