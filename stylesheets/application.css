@@ -1027,6 +1027,14 @@ table.progress td {
     border: none;
 }
 
+table.list table.progress {
+    height: 1px;
+}
+
+table.list table.progress td {
+    height: 1px;
+}
+
 table.progress td.closed {
     background: linear-gradient(90deg, #66bb6a, #388e3c);
 }
