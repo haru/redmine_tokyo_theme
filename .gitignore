@@ -1,3 +1,5 @@
 doc/
 
 .serena/
+.playwright-mcp/
+.claude/settings.local.json
