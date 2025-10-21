@@ -1162,3 +1162,46 @@ select:focus {
 select {
     padding: 0 24px 0 14px !important;
 }
+
+/* -------------------------------------------------- */
+/* Material Design Status Badges                      */
+/* -------------------------------------------------- */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 999px;
+    border: none;
+    box-shadow: var(--md-shadow-sm);
+    transition: transform 120ms ease, box-shadow 160ms ease, background 160ms ease;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+.badge:hover {
+    box-shadow: var(--md-shadow-md);
+    transform: translateY(-1px);
+}
+
+.badge-status-closed {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    color: #ffffff;
+}
+
+.badge-status-closed:hover {
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+}
+
+.badge-status-open {
+    background: linear-gradient(135deg, #fb8c00, #f57c00);
+    color: #ffffff;
+}
+
+.badge-status-open:hover {
+    background: linear-gradient(135deg, #f57c00, #ef6c00);
+}
