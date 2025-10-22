@@ -591,6 +591,12 @@ div.issue {
     mask-image: url("./icons/ai-helper-dashboard.svg");
 }
 
+#header #main-menu ul li a.repository::before {
+    display: inline-block;
+    -webkit-mask-image: url("./icons/repository.svg");
+    mask-image: url("./icons/repository.svg");
+}
+
 @supports not ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
     #header #main-menu a::before {
         background-color: transparent;
@@ -654,6 +660,10 @@ div.issue {
 
     #header #main-menu ul li a.ai-helper-dashboard::before {
         background-image: url("./icons/ai-helper-dashboard.svg");
+    }
+
+    #header #main-menu ul li a.repository::before {
+        background-image: url("./icons/repository.svg");
     }
 }
 
