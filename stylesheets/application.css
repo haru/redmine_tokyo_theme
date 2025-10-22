@@ -197,7 +197,7 @@
 #project-jump .drdn-items.selection a:hover,
 #project-jump .drdn-items.selection a:focus {
     background: rgba(25, 118, 210, 0.1);
-    color: var(--md-primary);
+    color: #0d47a1 !important;
 }
 
 #project-jump .drdn-items.selection a:active {
