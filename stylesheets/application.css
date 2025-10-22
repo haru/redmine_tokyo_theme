@@ -613,8 +613,26 @@ div.wiki ul.toc li.heading3 {
     list-style-type: circle;
 }
 
+.wiki table {
+    border: 1px solid rgba(20, 43, 63, 0.12) !important;
+    border-radius: 14px;
+    box-shadow: 0px 3px 4px rgba(15, 35, 52, 0.15);
+    background: var(--md-surface-alt);
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
 .wiki table th {
-    background: #EEEEEE;
+    background: rgba(25, 118, 210, 0.12);
+    color: var(--md-text);
+    border-bottom: 1px solid var(--md-border);
+    padding: 10px 16px;
+}
+
+.wiki table td {
+    border-bottom: 1px solid var(--md-divider);
+    padding: 12px 16px;
 }
 
 h1,
