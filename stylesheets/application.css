@@ -78,59 +78,59 @@
 }
 
 #project-jump .drdn-trigger {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 38px 8px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--md-border);
-  background: var(--md-surface-alt);
-  color: var(--md-text);
-  font-weight: 500;
-  min-width: 185px;
-  cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 38px 8px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--md-border);
+    background: var(--md-surface-alt);
+    color: var(--md-text);
+    font-weight: 500;
+    min-width: 185px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 #project-jump .drdn-trigger::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid var(--md-text-muted);
-  border-bottom: 2px solid var(--md-text-muted);
-  transform: translateY(-50%) rotate(45deg);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--md-text-muted);
+    border-bottom: 2px solid var(--md-text-muted);
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    pointer-events: none;
 }
 
 #project-jump.open .drdn-trigger::after,
 #project-jump.expanded .drdn-trigger::after {
-  transform: translateY(-20%) rotate(225deg);
+    transform: translateY(-20%) rotate(225deg);
 }
 
 #project-jump.open .drdn-trigger,
 #project-jump.expanded .drdn-trigger {
-  border-color: rgba(25, 118, 210, 0.5);
+    border-color: rgba(25, 118, 210, 0.5);
     background: rgba(25, 118, 210, 0.08);
 }
 
 #project-jump .drdn-trigger:hover {
-  border-color: rgba(25, 118, 210, 0.4);
+    border-color: rgba(25, 118, 210, 0.4);
 }
 
 #project-jump .drdn-trigger:active {
-  background: rgba(25, 118, 210, 0.1);
+    background: rgba(25, 118, 210, 0.1);
 }
 
 #project-jump .drdn-trigger:hover::after,
 #project-jump .drdn-trigger:focus-visible::after,
 #project-jump.open .drdn-trigger::after,
 #project-jump.expanded .drdn-trigger::after {
-  border-color: var(--md-primary);
+    border-color: var(--md-primary);
 }
 
 #project-jump .drdn-content {
@@ -1306,6 +1306,8 @@ table.progress td {
 table.list table.progress {
     height: 18px;
     max-height: 18px;
+    margin: 1px auto !important;
+    float: none !important;
 }
 
 table.list table.progress td {
