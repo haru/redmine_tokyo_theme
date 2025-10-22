@@ -170,7 +170,7 @@ tr.even.priority-3 td {
 
 }
 
-#header #main-menu a {
+#header #main-menu > ul > li > a {
     color: #2F4F4F;
     display: flex;
     align-items: center;
@@ -184,7 +184,7 @@ tr.even.priority-3 td {
     font-weight: normal;
 }
 
-#header #main-menu a::before {
+#header #main-menu > ul > li > a::before {
     content: "";
     display: none;
     width: 18px;
@@ -202,24 +202,24 @@ tr.even.priority-3 td {
     opacity: 1;
 }
 
-#header #main-menu a:hover::before,
-#header #main-menu a.selected::before {
+#header #main-menu > ul > li > a:hover::before,
+#header #main-menu > ul > li > a.selected::before {
     opacity: 1;
 }
 
-#header #main-menu a.new-object {
+#header #main-menu > ul > li > a.new-object {
     justify-content: center;
     gap: 0;
 }
 
-#header #main-menu a.new-object::before {
+#header #main-menu > ul > li > a.new-object::before {
     display: none;
 }
 
 
 
-#header #main-menu a.selected,
-#header #main-menu li a.selected:hover {
+#header #main-menu > ul > li > a.selected,
+#header #main-menu > ul > li > a.selected:hover {
     background-color: #EEEEEE;
     border-width: 1px;
     border-style: solid;
@@ -231,7 +231,7 @@ tr.even.priority-3 td {
 
 }
 
-#header #main-menu a:hover {
+#header #main-menu > ul > li > a:hover {
     color: #1E90FF;
     font-weight: bold;
 }
@@ -778,7 +778,7 @@ body {
     list-style: none;
 }
 
-#header #main-menu a {
+#header #main-menu > ul > li > a {
     color: var(--md-text);
     padding: 6px 10px 6px 42px;
     font-weight: 500;
@@ -789,22 +789,102 @@ body {
     background-color: transparent;
 }
 
-#header #main-menu a:hover,
-#header #main-menu li a:hover {
+#header #main-menu > ul > li > a:hover {
     background-color: rgba(25, 118, 210, 0.08);
     color: var(--md-primary);
     box-shadow: none;
     border-radius: 12px;
 }
 
-#header #main-menu a.selected,
-#header #main-menu li a.selected:hover {
+#header #main-menu > ul > li > a.selected,
+#header #main-menu > ul > li > a.selected:hover {
     background-color: rgba(25, 118, 210, 0.18);
     color: var(--md-primary-dark);
     border: none;
     box-shadow: none;
     font-weight: 600;
     border-radius: 12px;
+}
+
+/* Plus button styling */
+#main-menu li:first-child {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+#main-menu li:first-child > a {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+    padding: 0 !important;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--md-primary), var(--md-primary-dark)) !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    box-shadow: var(--md-shadow-md);
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease !important;
+}
+
+#main-menu li:first-child > a:hover {
+    background: linear-gradient(135deg, var(--md-primary-dark), var(--md-primary)) !important;
+    color: #fff !important;
+    transform: scale(1.05);
+    box-shadow: var(--md-shadow-lg);
+}
+
+/* Dropdown menu styling fix */
+#main-menu .menu-children {
+    width: auto !important;
+    min-width: 180px !important;
+    background: transparent !important;
+}
+
+#main-menu .menu-children li {
+    background: transparent !important;
+    margin: 0 !important;
+}
+
+#main-menu .menu-children li a,
+#main-menu .menu-children li a.new-issue-sub {
+    background-color: #fff !important;
+    color: #333 !important;
+    padding: 8px 16px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-width: 148px !important;
+    max-width: none !important;
+    min-height: auto !important;
+    border-radius: 8px !important;
+    display: block !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+    background-position: initial !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: Verdana, sans-serif !important;
+    line-height: 1.5 !important;
+    text-decoration: none !important;
+    gap: initial !important;
+    align-items: initial !important;
+    justify-content: initial !important;
+    flex-direction: initial !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+#main-menu .menu-children li a:hover {
+    background-color: #e3f2fd !important;
+    color: var(--md-primary) !important;
 }
 
 #main {
@@ -963,16 +1043,7 @@ h4 {
     font-weight: 600;
 }
 
-#main-menu .menu-children li a {
-    float: none;
-    display: block;
-    padding: 0 16px;
-    min-height: 48px;
-    line-height: 1.5;
-    border: none;
-    border-radius: 0;
-    white-space: normal;
-}
+/* Moved to line 857-871 with improved styling */
 
 
 table.list {
