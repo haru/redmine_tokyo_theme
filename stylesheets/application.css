@@ -825,23 +825,22 @@ body {
     padding: 0 0 2px 0 !important;
     border: none !important;
     border-radius: 50% !important;
-    background: linear-gradient(135deg, var(--md-primary), var(--md-primary-dark)) !important;
-    color: #fff !important;
+    background: rgba(25, 118, 210, 0.12) !important;
+    color: var(--md-primary) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-size: 24px !important;
     font-weight: 300 !important;
     line-height: 1 !important;
-    box-shadow: var(--md-shadow-md);
-    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease !important;
+    box-shadow: none;
+    transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease !important;
 }
 
 #main-menu li:first-child > a:hover {
-    background: linear-gradient(135deg, var(--md-primary-dark), var(--md-primary)) !important;
-    color: #fff !important;
-    transform: scale(1.05);
-    box-shadow: var(--md-shadow-lg);
+    background: rgba(25, 118, 210, 0.22) !important;
+    color: var(--md-primary-dark) !important;
+    box-shadow: var(--md-shadow-sm);
     border-radius: 50% !important;
 }
 
@@ -850,7 +849,7 @@ body {
     width: auto !important;
     min-width: 180px !important;
     background: transparent !important;
-    top: 40px !important;
+    top: 32px !important;
 }
 
 #main-menu .menu-children li {
