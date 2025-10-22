@@ -1175,6 +1175,46 @@ input[type="button"]:active,
     box-shadow: var(--md-shadow-sm);
 }
 
+/* File Input Button */
+input[type="file"] {
+    max-width: 100% !important;
+    width: auto !important;
+    min-width: 300px;
+}
+
+/* Fieldset styling */
+fieldset {
+    border-radius: 10px !important;
+}
+
+input[type="file"]::file-selector-button,
+input[type="file"]::-webkit-file-upload-button {
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(135deg, var(--md-primary), var(--md-primary-dark));
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 6px 20px 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--md-shadow-sm);
+    transition: transform 120ms ease, box-shadow 160ms ease, background 160ms ease;
+    margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button:hover,
+input[type="file"]::-webkit-file-upload-button:hover {
+    box-shadow: var(--md-shadow-md);
+    transform: translateY(-1px);
+}
+
+input[type="file"]::file-selector-button:active,
+input[type="file"]::-webkit-file-upload-button:active {
+    transform: translateY(0);
+    box-shadow: var(--md-shadow-sm);
+}
+
 input,
 textarea,
 select {
