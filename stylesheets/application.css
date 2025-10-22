@@ -616,9 +616,7 @@ div.wiki ul.toc li.heading3 {
 .wiki table {
     border: 1px solid rgba(20, 43, 63, 0.12) !important;
     border-radius: 14px;
-    /*
     box-shadow: 0px 2px 3px rgba(15, 35, 52, 0.15);
-    */
     background: var(--md-surface-alt);
     border-collapse: separate;
     border-spacing: 0;
