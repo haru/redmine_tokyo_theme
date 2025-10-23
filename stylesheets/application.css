@@ -1379,7 +1379,7 @@ table.progress td.closed {
 }
 
 table.progress td.done {
-    background: linear-gradient(90deg, var(--md-primary), var(--md-primary-dark));
+    background: #a5d6a7;
 }
 
 table.progress td.todo {
