@@ -35,7 +35,7 @@
     align-items: center;
     gap: 6px;
     margin: 0;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 0.8125rem;
     line-height: 1;
     color: var(--md-text-muted);
@@ -87,7 +87,7 @@
     border: 1px solid var(--md-border);
     background: var(--md-surface-alt);
     color: var(--md-text);
-    font-weight: 500;
+    font-weight: normal;
     min-width: 185px;
     cursor: pointer;
     transition: border-color 0.2s ease, background 0.2s ease;
@@ -931,7 +931,7 @@ body {
 #header h1 {
     margin: 0;
     font-family: "Roboto", "Noto Sans JP", sans-serif;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 24px;
     color: var(--md-text);
     text-shadow: none;
