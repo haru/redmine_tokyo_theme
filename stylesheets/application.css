@@ -1571,7 +1571,7 @@ select {
 
 @media screen and (max-width: 899px) {
     div.flyout-menu {
-        padding-bottom: 32px;
+        padding-bottom: 72px;
     }
 
     #main {
