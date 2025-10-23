@@ -1570,6 +1570,10 @@ select {
 /* -------------------------------------------------- */
 
 @media (max-width: 768px) {
+    div.flyout-menu {
+        padding-bottom: 32px;
+    }
+
     #main {
         padding: 8px 0 16px;
         margin-left: 0;
