@@ -617,7 +617,7 @@ div.wiki ul.toc li.heading3 {
     border: 1px solid rgba(20, 43, 63, 0.12) !important;
     border-radius: 14px;
     box-shadow: 0px 2px 3px rgba(15, 35, 52, 0.15);
-    background: var(--md-surface-alt);
+    background: transparent;
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
@@ -1138,6 +1138,34 @@ div.box {
 div.issue {
     background-color: #fffce6;
     margin-bottom: 30px;
+}
+
+/* Issue detail page: child issues & related issues tables */
+div.issue table.list.issues {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+div.issue table.list.issues thead th {
+    background: transparent;
+    border-bottom: none;
+}
+
+div.issue table.list.issues tbody tr {
+    background: transparent;
+}
+
+div.issue table.list.issues tbody tr:nth-child(even) {
+    background: transparent;
+}
+
+div.issue table.list.issues tbody tr:hover {
+    background: rgba(255, 245, 200, 0.3);
+}
+
+div.issue table.list.issues td {
+    border-bottom: none;
 }
 
 #content>h2 {
