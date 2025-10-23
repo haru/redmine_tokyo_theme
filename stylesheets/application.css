@@ -1266,6 +1266,17 @@ h4 {
     font-weight: 600;
 }
 
+.tabs-buttons {
+    background: #f8f9fa !important;
+}
+
+.tabs-buttons button,
+.tabs-buttons button.tab-left,
+.tabs-buttons button.tab-right {
+    background: #f8f9fa !important;
+    border: none !important;
+}
+
 /* Moved to line 857-871 with improved styling */
 
 
