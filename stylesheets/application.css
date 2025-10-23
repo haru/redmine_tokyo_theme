@@ -1569,7 +1569,7 @@ select {
 /* Mobile Layout Optimization                         */
 /* -------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 899px) {
     div.flyout-menu {
         padding-bottom: 32px;
     }
