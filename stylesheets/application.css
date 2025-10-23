@@ -1553,3 +1553,61 @@ select {
 .badge-status-open:hover {
     background: linear-gradient(135deg, #f57c00, #ef6c00);
 }
+
+/* -------------------------------------------------- */
+/* Mobile Layout Optimization                         */
+/* -------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #main {
+        padding: 8px 0 16px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #main.no-main-menu {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #main #content,
+    div.box,
+    div.issue,
+    .wiki .box,
+    div.journal {
+        padding: 12px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    table.list th {
+        padding: 8px 6px;
+        font-size: 0.9em;
+    }
+
+    table.list td {
+        padding: 4px 6px;
+        line-height: 1.3;
+    }
+
+    table.issues td {
+        padding-left: 2px;
+        padding-right: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    #header {
+        padding: 8px 12px;
+    }
+
+    #content > h2 {
+        font-size: 18px;
+        margin: 0 0 14px;
+    }
+
+    .wiki table th,
+    .wiki table td {
+        padding: 8px 10px;
+    }
+}
