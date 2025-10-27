@@ -1,0 +1,6 @@
+doc/
+
+.serena/
+.playwright-mcp/
+.claude/settings.local.json
+wiki-h1-desktop-after-2025-10.png
