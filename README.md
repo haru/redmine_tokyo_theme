@@ -6,7 +6,7 @@
 
 # Redmine Tokyo Theme
 
-[Redmine Tokyo](https://redmine.tokyo/) コミュニティで使用されているテーマです
+[redmine.tokyo](https://redmine.tokyo/) コミュニティで使用されているテーマです
 
 ## 使い方
 
