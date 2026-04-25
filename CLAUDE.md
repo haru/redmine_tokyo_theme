@@ -28,11 +28,12 @@ The theme uses CSS custom properties (CSS variables) defined in `:root` for cons
 ## Development Commands
 
 ### Devcontainer Environment
-The repository ships with a devcontainer. On creation, the theme is **symlinked** (not copied) into Redmine's themes directory automatically:
-```
-/usr/local/redmine/themes/redmine_tokyo_theme -> /workspaces/redmine_tokyo_theme
-```
-Edit files in `/workspaces/redmine_tokyo_theme` and changes are immediately visible to the running Redmine instance at **http://localhost:3000**.
+The repository ships with a devcontainer (`docker-compose.yml`). Services:
+- **app**: Main container (Ruby 3.4, Redmine 6.1-stable). The theme is **symlinked** into Redmine's themes directory on container creation: `/usr/local/redmine/themes/redmine_tokyo_theme -> /workspaces/redmine_tokyo_theme`
+- **postgres**: PostgreSQL database
+- **browserless**: Headless Chrome (`browserless/chrome`) for Playwright automation
+
+Edit files in `/workspaces/redmine_tokyo_theme` and changes are immediately visible to Redmine.
 
 The `$REDMINE_ROOT` environment variable points to `/usr/local/redmine`. Run Redmine commands from there:
 
@@ -43,6 +44,15 @@ cd $REDMINE_ROOT && bundle exec rails tmp:cache:clear
 # Restart Redmine server
 cd $REDMINE_ROOT && bundle exec rails server -b 0.0.0.0
 ```
+
+### Playwright MCP / Browser Testing
+The Playwright MCP server connects to browserless via `ws://browserless:3000` (configured in `.mcp.json`).
+
+**Important**: When accessing Redmine from the Playwright MCP browser, use **`http://app:3000`** (not `localhost:3000`). The container running the browser resolves `app` as the DevContainer's service name, not `localhost`.
+
+Default Redmine credentials: **admin / adminadmin**
+
+Screenshots from browser testing should be saved to `.playwright-mcp/` with the naming pattern `view-name-YYYY-MM.png`.
 
 ### Distribution
 Create release bundle from the repo root:
@@ -60,7 +70,7 @@ Test changes across these key Redmine views:
 - **Calendar/Activity**: Icon rendering, date formatting
 - **Mobile view**: Menu toggle behavior, responsive layout
 
-Force browser cache clear when testing CSS/JS changes. Store before/after screenshots in `.playwright-mcp/` with the naming pattern `view-name-YYYY-MM.png`.
+Force browser cache clear when testing CSS/JS changes.
 
 ## Coding Standards
 
