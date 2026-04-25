@@ -7,5 +7,9 @@
 			"path": "/usr/local/redmine"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"git.ignoredRepositories": [
+			"/usr/local/redmine"
+		]
+	}
 }
