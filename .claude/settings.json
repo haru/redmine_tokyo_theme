@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(printenv)",
+      "Bash(awk -F: '{print $2}')",
+      "Bash(bundle exec *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)"
+    ]
+  }
+}
