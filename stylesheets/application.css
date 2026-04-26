@@ -1363,6 +1363,61 @@ table.issues td {
     padding-right: 12px;
 }
 
+/* div.table-list (boards, etc.) */
+.table-list {
+    border: 1px solid var(--md-border);
+    border-radius: 14px;
+    box-shadow: var(--md-shadow-sm);
+    background: var(--md-surface-alt);
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+    display: table;
+    width: calc(100% - 8px);
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.table-list-header {
+    display: table-row;
+    background: rgba(25, 118, 210, 0.12);
+    font-weight: 600;
+    border-bottom: 1px solid var(--md-border);
+}
+
+.table-list-header .table-list-cell {
+    background: rgba(25, 118, 210, 0.12);
+    color: var(--md-text);
+    border-bottom: 1px solid var(--md-border);
+    padding: 10px 12px;
+    white-space: nowrap;
+}
+
+.table-list-row {
+    display: table-row;
+}
+
+.table-list-row:nth-child(even) .table-list-cell {
+    background: rgba(25, 118, 210, 0.04);
+}
+
+.table-list-row:hover .table-list-cell {
+    background: rgba(25, 118, 210, 0.09);
+}
+
+.table-list-cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--md-divider);
+}
+
+/* Issue List */
+table.issues td {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 table.list tbody tr:nth-child(even) td {
     background: rgba(25, 118, 210, 0.04);
 }
