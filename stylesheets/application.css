@@ -1019,7 +1019,7 @@ body {
 #header #main-menu>ul>li>a {
     color: var(--md-text);
     padding: 6px 10px 6px 42px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
     border-left: none;
     transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
@@ -1040,7 +1040,7 @@ body {
     color: var(--md-primary-dark);
     border: none;
     box-shadow: 0px 3px 4px rgba(15, 35, 52, 0.15);
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 12px;
     transform: translateY(-1px);
     transition: transform 160ms ease, box-shadow 160ms ease;
