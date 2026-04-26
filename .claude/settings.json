@@ -8,7 +8,11 @@
       "mcp__playwright__browser_fill_form",
       "mcp__playwright__browser_tabs",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://browserless:3000/json/version)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://app:3000/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://app:3000/)",
+      "WebFetch(domain:claude.ai)",
+      "WebFetch(domain:linear.app)",
+      "WebFetch(domain:plane.so)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://browserless:3000/)"
     ]
   }
 }

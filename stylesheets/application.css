@@ -1,7 +1,8 @@
 @import url(../../../stylesheets/application.css);
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
 
 :root {
+    --font-sans: "Inter", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "メイリオ", sans-serif;
     --md-primary: #1976d2;
     --md-primary-dark: #0f5ca8;
     --md-secondary: #43a047;
@@ -209,7 +210,10 @@ input,
 textarea,
 select,
 button {
-    font-family: "Noto Sans JP", "メイリオ", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Verdana", sans-serif;
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 tr.odd.priority-7,
@@ -355,7 +359,7 @@ tr.even.priority-3 td {
     border-bottom: 2px solid #C0C0C0;
     border-right: 2px solid #C0C0C0;
     */
-    font-family: "Noto Sans JP", "メイリオ", "Yu Gothic", Verdana, sans-serif;
+    font-family: var(--font-sans);
 
 }
 
@@ -639,7 +643,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Roboto", "Noto Sans JP", "メイリオ", "Trebuchet MS", Verdana, sans-serif;
+    font-family: var(--font-sans);
     text-shadow: 2px 2px 2px #808080;
 }
 
@@ -886,6 +890,8 @@ div.issue {
 body {
     background: var(--md-surface);
     color: var(--md-text);
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 #wrapper {
@@ -930,7 +936,7 @@ body {
 
 #header h1 {
     margin: 0;
-    font-family: "Roboto", "Noto Sans JP", sans-serif;
+    font-family: var(--font-sans);
     font-weight: normal;
     font-size: 24px;
     color: var(--md-text);
@@ -1094,7 +1100,7 @@ body {
     background-position: initial !important;
     font-size: 14px !important;
     font-weight: 400 !important;
-    font-family: Verdana, sans-serif !important;
+    font-family: var(--font-sans) !important;
     line-height: 1.5 !important;
     text-decoration: none !important;
     gap: initial !important;
@@ -1259,7 +1265,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Roboto", "Noto Sans JP", sans-serif;
+    font-family: var(--font-sans);
     color: var(--md-text);
     text-shadow: none;
 }
