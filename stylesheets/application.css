@@ -479,7 +479,6 @@ div#activity dt,
 
 div#activity dd,
 #search-results dd {
-    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -903,7 +902,7 @@ div.issue {
 body {
     background: var(--md-surface);
     color: var(--md-text);
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -1020,7 +1019,6 @@ body {
     color: var(--md-text);
     padding: 6px 10px 6px 42px;
     font-weight: 400;
-    font-size: 15px;
     border-left: none;
     transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
     background-position: 18px center;
@@ -1193,7 +1191,7 @@ div.issue table.list.issues td {
     position: relative;
     margin: 0 0 20px;
     padding-left: 18px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--md-text);
 }
@@ -1217,7 +1215,6 @@ div.issue table.list.issues td {
     padding: 0;
     min-height: auto;
     margin-left: 32px;
-    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -1233,7 +1230,6 @@ div.issue table.list.issues td {
 
 #sidebar ul li a,
 #sidebar ol li a {
-    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -1339,7 +1335,6 @@ table.list {
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
-    font-size: 16px;
     line-height: 1.5;
     margin-left: 4px;
     margin-right: 4px;
@@ -1376,7 +1371,6 @@ table.issues td {
     box-shadow: var(--md-shadow-sm);
     background: var(--md-surface-alt);
     overflow: hidden;
-    font-size: 16px;
     line-height: 1.5;
     display: table;
     width: calc(100% - 8px);
