@@ -921,6 +921,7 @@ body {
 
 #top-menu a {
     color: #fff;
+    font-weight: normal;
     padding: 0 0.9em;
     border-radius: 3px;
     transition: background 160ms ease, color 160ms ease;
