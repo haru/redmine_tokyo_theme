@@ -1335,6 +1335,9 @@ table.list {
     overflow: hidden;
     font-size: 16px;
     line-height: 1.5;
+    margin-left: 4px;
+    margin-right: 4px;
+    width: calc(100% - 8px);
 }
 
 table.list th {
@@ -1345,8 +1348,8 @@ table.list th {
 }
 
 table.issues th {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 table.list td {
@@ -1356,8 +1359,8 @@ table.list td {
 
 /* Issue List */
 table.issues td {
-    padding-left: 2px;
-    padding-right: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 table.list tbody tr:nth-child(even) td {
