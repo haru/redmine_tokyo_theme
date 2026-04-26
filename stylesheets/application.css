@@ -23,6 +23,8 @@
     justify-content: flex-end;
     gap: 16px;
     margin-left: auto;
+    align-self: flex-start;
+    margin-top: 8px;
 }
 
 #quick-search form {
@@ -431,8 +433,7 @@ tr.even.priority-3 td {
 
 #header {
     margin-left: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
+    padding: 0px;
     height: 5em;
     min-height: 0px;
 }
@@ -942,37 +943,38 @@ body {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(237, 241, 247, 0.94));
     border-bottom: 1px solid var(--md-border);
     box-shadow: var(--md-shadow-sm);
-    padding: 8px 28px 6px 16px;
-    height: auto;
+    padding: 0 28px 0 0;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 #header h1 {
     margin: 0;
     font-family: var(--font-sans);
     font-weight: normal;
-    font-size: 18px;
+    font-size: 22px;
     color: var(--md-text);
     text-shadow: none;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1.3fr;
     align-items: center;
     column-gap: 12px;
     padding: 0;
-    height: auto;
+    height: 100%;
+    align-self: stretch;
+    order: -1;
 }
 
 #header h1::before {
     content: "";
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin-right: 0;
+    display: block;
+    aspect-ratio: 1 / 1;
     background: url("./logo.png") no-repeat center/contain;
     grid-row: 1 / span 2;
     grid-column: 1;
-    align-self: center;
+    align-self: stretch;
 }
 
 #header h1 .breadcrumbs {
