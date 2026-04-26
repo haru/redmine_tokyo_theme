@@ -1134,7 +1134,7 @@ div.journal {
     border: 1px solid var(--md-border);
     border-radius: 16px;
     box-shadow: var(--md-shadow-sm);
-    padding: 22px 26px;
+    padding: 28px 40px;
 }
 
 div.box {
