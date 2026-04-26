@@ -1039,7 +1039,7 @@ body {
     background-color: rgba(25, 118, 210, 0.18);
     color: var(--md-primary-dark);
     border: none;
-    box-shadow: 0px 3px 4px rgba(15, 35, 52, 0.15);
+    box-shadow: 0px 1px 3px rgba(15, 35, 52, 0.08);
     font-weight: 500;
     border-radius: 12px;
     transform: translateY(-1px);
