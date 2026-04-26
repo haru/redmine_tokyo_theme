@@ -28,11 +28,10 @@ services:
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
   postgres:
-    image: postgres:latest
+    image: postgres:14
     restart: unless-stopped
     volumes:
-      - postgres-data:/var/lib/postgresql/data
-      - ./create-db-user.sql:/docker-entrypoint-initdb.d/create-db-user.sql
+      - postgres-rmtokyo-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: redmine
@@ -44,7 +43,7 @@ services:
     image: mysql:latest
     restart: unless-stopped
     volumes:
-      - mysql-data:/var/lib/mysql
+      - mysql-rmtokyo-data:/var/lib/mysql
     # network_mode: service:postgres
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     environment:
@@ -52,6 +51,22 @@ services:
       MYSQL_USER: redmine
       MYSQL_DB: redmine
       MYSQL_PASSWORD: remine
+  browserless:
+    image: browserless/chrome
+    restart: unless-stopped
+    # ports:
+    #   - 3000:3000
+    environment:
+      # Maximum concurrent sessions
+      MAX_CONCURRENT_SESSIONS: 10
+      # Connection timeout in milliseconds
+      CONNECTION_TIMEOUT: 60000
+      # Maximum queue length
+      MAX_QUEUE_LENGTH: 10
+      # Enable debugger for Playwright
+      ENABLE_DEBUGGER: "false"
+      # Token for authentication (optional, set to empty for no auth)
+      TOKEN: ""
 volumes:
-  postgres-data: null
-  mysql-data: null
+  postgres-rmtokyo-data: null
+  mysql-rmtokyo-data: null

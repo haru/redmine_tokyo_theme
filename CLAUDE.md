@@ -9,7 +9,7 @@ Redmine Tokyo Theme is a static theme for Redmine that modernizes the default lo
 ## Architecture
 
 ### Static Theme Structure
-This is a **zero-build theme** designed to drop directly into Redmine's `public/themes/` directory. All files are served as-is by Redmine's asset pipeline without compilation.
+This is a **zero-build theme** designed to drop directly into Redmine's `themes/` directory. All files are served as-is by Redmine's asset pipeline without compilation.
 
 ### File Organization
 - **stylesheets/application.css**: Main stylesheet that imports Redmine's base CSS and applies Material Design-inspired overrides using CSS custom properties
@@ -20,40 +20,44 @@ This is a **zero-build theme** designed to drop directly into Redmine's `public/
 
 ### CSS Architecture
 The theme uses CSS custom properties (CSS variables) defined in `:root` for consistent theming:
-- Material Design color palette: `--md-primary`, `--md-secondary`, `--md-surface`
+- Material Design color palette: `--md-primary`, `--md-secondary`, `--md-surface`, `--md-border`, `--md-text`, `--md-shadow-sm`, `--md-shadow-md`
 - Typography: Noto Sans JP and Roboto fonts from Google Fonts CDN
-- Priority-based styling: Comprehensive color coding for issue priorities (priority-5 through priority-7)
-- Overrides are applied on top of Redmine's base stylesheet via `@import url(../../../stylesheets/application.css)`
+- Priority-based styling: Color coding for issue priorities 3, 5, 6, and 7 (odd/even rows with hover states)
+- Overrides are applied on top of Redmine's base stylesheet via `@import url(../../../stylesheets/application.css)` — the three `../` levels navigate from `public/themes/redmine_tokyo_theme/stylesheets/` up to `public/stylesheets/`
 
 ## Development Commands
 
-### Local Development Setup
-1. Copy theme to Redmine installation:
-   ```bash
-   cp -r /path/to/redmine_tokyo_theme /path/to/redmine/public/themes/
-   ```
-
-2. Clear Redmine asset cache when CSS/JS changes don't appear:
-   ```bash
-   bundle exec rails tmp:cache:clear
-   ```
-
-3. Restart Redmine Rails server if needed:
-   ```bash
-   bundle exec rails server
-   ```
-
 ### Devcontainer Environment
-The repository includes a `.devcontainer` setup with:
-- Ruby 3.4
-- Redmine 6.1-stable
-- PostgreSQL and MySQL databases
-- No special build commands needed - theme files are edited directly
+The repository ships with a devcontainer (`docker-compose.yml`). Services:
+- **app**: Main container (Ruby 3.4, Redmine 6.1-stable). The theme is **symlinked** into Redmine's themes directory on container creation: `/usr/local/redmine/themes/redmine_tokyo_theme -> /workspaces/redmine_tokyo_theme`
+- **postgres**: PostgreSQL database
+- **browserless**: Headless Chrome (`browserless/chrome`) for Playwright automation
+
+Edit files in `/workspaces/redmine_tokyo_theme` and changes are immediately visible to Redmine.
+
+The `$REDMINE_ROOT` environment variable points to `/usr/local/redmine`. Run Redmine commands from there:
+
+```bash
+# Clear asset cache when CSS/JS changes don't appear
+cd $REDMINE_ROOT && bundle exec rails tmp:cache:clear
+
+# Restart Redmine server
+cd $REDMINE_ROOT && bundle exec rails server -b 0.0.0.0
+```
+
+### Playwright MCP / Browser Testing
+The Playwright MCP server connects to browserless via `ws://browserless:3000` (configured in `.mcp.json`).
+
+**Important**: When accessing Redmine from the Playwright MCP browser, use **`http://app:3000`** (not `localhost:3000`). The container running the browser resolves `app` as the DevContainer's service name, not `localhost`.
+
+Default Redmine credentials: **admin / adminadmin**
+
+Screenshots from browser testing should be saved to `.playwright-mcp/` with the naming pattern `view-name-YYYY-MM.png`.
 
 ### Distribution
-Create release bundle:
+Create release bundle from the repo root:
 ```bash
-zip -r redmine_tokyo_theme.zip . -x "*.git*" -x "*.devcontainer*"
+zip -r redmine_tokyo_theme.zip . -x "*.git*" -x "*.devcontainer*" -x "*.playwright-mcp*" -x "*.claude*" -x "*.vscode*"
 ```
 
 ## Testing Approach
@@ -66,7 +70,7 @@ Test changes across these key Redmine views:
 - **Calendar/Activity**: Icon rendering, date formatting
 - **Mobile view**: Menu toggle behavior, responsive layout
 
-Force browser cache clear when testing CSS/JS changes. Capture before/after screenshots for visual changes (naming: `view-name-YYYY-MM.png`).
+Force browser cache clear when testing CSS/JS changes.
 
 ## Coding Standards
 
@@ -97,15 +101,15 @@ All image paths in CSS must be relative (e.g., `url(gantt-blue.png)`) since they
 ## Technical Constraints
 
 - **No Build Tools**: No npm, webpack, sass, postcss, or any compilation step
-- **Browser Support**: Modern browsers (Chrome, Firefox, Safari, Edge); IE11 compatibility if needed
+- **Browser Support**: Modern browsers (Chrome, Firefox, Safari, Edge)
 - **Redmine Integration**: Must work with Redmine 5.x and 6.x
-- **Asset Caching**: Redmine's Rails asset pipeline may cache files - users need to clear cache manually
+- **Asset Caching**: Redmine's Rails asset pipeline may cache files - clear with `tmp:cache:clear`
 - **Path Portability**: Theme must work regardless of Redmine's deployment path (subdir installations, etc.)
 
 ## Common Patterns
 
 ### Adding Priority Color Styling
-Priority colors are defined for both odd/even table rows with hover states:
+Priority colors cover odd/even rows with hover states. Active priorities are 3, 5, 6, and 7:
 ```css
 tr.odd.priority-N,
 table.list tbody tr.odd.priority-N:hover {
@@ -113,6 +117,17 @@ table.list tbody tr.odd.priority-N:hover {
 }
 tr.odd.priority-N {
     background: #bgcolor;
+}
+tr.even.priority-N,
+table.list tbody tr.even.priority-N:hover {
+    color: #colorcode;
+}
+tr.even.priority-N {
+    background: #bgcolor-alt;
+}
+tr.odd.priority-N td,
+tr.even.priority-N td {
+    border-bottom-color: #bordercolor;
 }
 ```
 
