@@ -13,6 +13,17 @@
         "/workspaces/redmine_tokyo_theme"
       ],
       "env": {}
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--cdp-endpoint",
+        "ws://browserless:3000"
+      ],
+      "env": {}
     }
   }
 }
