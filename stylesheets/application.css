@@ -1354,7 +1354,7 @@ table.issues th {
 }
 
 table.list td {
-    border-top: 1px solid rgba(20, 43, 63, 0.07);
+    border-top: none;
     border-bottom: none;
     padding: 12px 16px;
 }
