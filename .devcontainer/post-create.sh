@@ -14,6 +14,7 @@ ln -s /workspaces/${THEME_NAME} themes/${PLUGIN_NAME}
 bundle install 
 
 initdb() {
+    rm -r db/schema.rb
     if [ $DB != "sqlite3" ]
     then
         bundle exec rake db:create
