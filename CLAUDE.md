@@ -29,8 +29,8 @@ The theme uses CSS custom properties (CSS variables) defined in `:root` for cons
 
 ### Devcontainer Environment
 The repository ships with a devcontainer (`docker-compose.yml`). Services:
-- **app**: Main container (Ruby 3.4, Redmine 6.1-stable). The theme is **symlinked** into Redmine's themes directory on container creation: `/usr/local/redmine/themes/redmine_tokyo_theme -> /workspaces/redmine_tokyo_theme`
-- **postgres**: PostgreSQL database
+- **app**: Main container (Ruby 4.0, Redmine 7.0-stable). The theme is **symlinked** into Redmine's themes directory on container creation: `/usr/local/redmine/themes/redmine_tokyo_theme -> /workspaces/redmine_tokyo_theme`
+- **postgres** / **mysql**: Either database backend is initialized (`post-create.sh` runs migrations against both plus sqlite3); which one Redmine actually uses depends on `config/database.yml`
 - **browserless**: Headless Chrome (`browserless/chrome`) for Playwright automation
 
 Edit files in `/workspaces/redmine_tokyo_theme` and changes are immediately visible to Redmine.
@@ -50,14 +50,14 @@ The Playwright MCP server connects to browserless via `ws://browserless:3000` (c
 
 **Important**: When accessing Redmine from the Playwright MCP browser, use **`http://app:3000`** (not `localhost:3000`). The container running the browser resolves `app` as the DevContainer's service name, not `localhost`.
 
-Default Redmine credentials: **admin / adminadmin**
+Login credentials come from `.devcontainer/.env` (gitignored, not committed), exposed to the `app` container as `REDMINE_UER` (note the typo — it's intentional and matches the actual variable name in `docker-compose.yml`, not a mistake to "fix") and `REDMINE_PASS`. Look them up with `env | grep -i redmine` rather than assuming a fixed admin/admin login — fall back to `REDMINE_USER` if `REDMINE_UER` isn't set. The `redmine-login` skill (`.claude/skills/redmine-login/`) automates this lookup-and-login flow.
 
-Screenshots from browser testing should be saved to `.playwright-mcp/` with the naming pattern `view-name-YYYY-MM.png`.
+Screenshots taken during browser testing must be saved under `tmp/` (gitignored) — pass an explicit path like `tmp/view-name-YYYY-MM.png` to the screenshot tool rather than the default filename, and never let one land in the repo root.
 
 ### Distribution
 Create release bundle from the repo root:
 ```bash
-zip -r redmine_tokyo_theme.zip . -x "*.git*" -x "*.devcontainer*" -x "*.playwright-mcp*" -x "*.claude*" -x "*.vscode*"
+zip -r redmine_tokyo_theme.zip . -x "*.git*" -x "*.devcontainer*" -x "*.playwright-mcp*" -x "*.claude*" -x "*.vscode*" -x "*tmp*"
 ```
 
 ## Testing Approach

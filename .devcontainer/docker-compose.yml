@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   app:
@@ -13,9 +13,12 @@ services:
         # Optional Node.js version to install
         NODE_VERSION: "lts/*"
         REDMINE_VERSION: "7.0-stable"
+    environment:
+      - REDMINE_UER=${REDMINE_USER:-admin}
+      - REDMINE_PASS=${REDMINE_PASS:-admin}
 
     extra_hosts:
-      - "host.docker.internal:host-gateway" 
+      - "host.docker.internal:host-gateway"
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
 

@@ -9,7 +9,8 @@
 | **No build step** | Static files only — no npm, webpack, or sass |
 | **Dev environment** | `$REDMINE_ROOT=/usr/local/redmine`; theme is symlinked, edits reflect immediately at http://localhost:3000 |
 | **Cache busting** | `cd $REDMINE_ROOT && bundle exec rails tmp:cache:clear` |
-| **Release bundle** | `zip -r redmine_tokyo_theme.zip . -x "*.git*" -x "*.devcontainer*" -x "*.playwright-mcp*" -x "*.claude*" -x "*.vscode*"` |
+| **Release bundle** | `zip -r redmine_tokyo_theme.zip . -x "*.git*" -x "*.devcontainer*" -x "*.playwright-mcp*" -x "*.claude*" -x "*.vscode*" -x "*tmp*"` |
+| **Playwright screenshots** | Save under `tmp/` (gitignored), e.g. `tmp/view-name-YYYY-MM.png` — never the repo root |
 
 ## Critical Constraints
 

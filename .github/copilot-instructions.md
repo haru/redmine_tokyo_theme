@@ -53,7 +53,7 @@ This is a static theme for Redmine that provides Tokyo-inspired styling. The the
 
 - Verify visual changes in a local Redmine sandbox
 - Test across major views: issues, Gantt, calendar, wiki, settings
-- Capture before/after screenshots for UI changes (name: `view-name-YYYY-MM.png`)
+- Capture before/after screenshots for UI changes (name: `view-name-YYYY-MM.png`), saved under `tmp/` (gitignored), not the repo root
 - Document browser-specific workarounds in commit messages
 
 ## Commit Guidelines
@@ -67,7 +67,7 @@ This is a static theme for Redmine that provides Tokyo-inspired styling. The the
 ## Distribution
 
 - Release bundle created with: `zip -r redmine_tokyo_theme.zip .`
-- Ensure `.git` and temporary files are excluded
+- Ensure `.git`, `tmp/`, and other temporary files are excluded
 - Verify package structure allows drop-in installation to Redmine themes directory
 
 ## Common Patterns

@@ -12,7 +12,20 @@
       "WebFetch(domain:claude.ai)",
       "WebFetch(domain:linear.app)",
       "WebFetch(domain:plane.so)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://browserless:3000/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://browserless:3000/)",
+      "Bash(env)",
+      "Bash(find /workspaces/redmine_tokyo_theme/.claude -maxdepth 3 2>/dev/null; echo \"---\"; find /workspaces/.claude/plugins -maxdepth 2 -iname \"*skill*\" 2>/dev/null | head -20; echo \"---user skills---\"; find ~/.claude/skills -maxdepth 2 2>/dev/null)",
+      "Read(//workspaces/.claude/plugins/**)",
+      "Read(//workspaces/.claude/**)",
+      "Bash(mkdir -p /workspaces/redmine_tokyo_theme/.claude/skills/redmine-login && ls /workspaces/redmine_tokyo_theme/.claude/)",
+      "Edit(/.claude/skills/redmine-login/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://app:3000/ --max-time 5)"
+    ],
+    "additionalDirectories": [
+      "/workspaces/redmine_tokyo_theme/.claude/skills"
     ]
+  },
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true
   }
 }
