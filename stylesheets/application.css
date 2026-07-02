@@ -948,6 +948,14 @@ body {
     align-items: center;
 }
 
+/* Redmine core reserves extra bottom padding in #header when a project's
+   main-menu is shown (body.has-main-menu), for its own default in-header
+   menu layout. This theme renders #main-menu as an absolutely-positioned
+   sidebar instead, so that reserved space just stretches the header. */
+body.has-main-menu #header {
+    padding-block-end: 0;
+}
+
 #header h1 {
     margin: 0;
     font-family: var(--font-sans);
