@@ -938,6 +938,16 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
+#top-menu .dropdown-content a {
+    color: var(--md-text);
+}
+
+#top-menu .dropdown-content a:hover,
+#top-menu .dropdown-content a:focus {
+    background: var(--md-surface);
+    color: var(--md-primary);
+}
+
 #header {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(237, 241, 247, 0.94));
     border-bottom: 1px solid var(--md-border);
@@ -946,6 +956,14 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+}
+
+/* Redmine core reserves extra bottom padding in #header when a project's
+   main-menu is shown (body.has-main-menu), for its own default in-header
+   menu layout. This theme renders #main-menu as an absolutely-positioned
+   sidebar instead, so that reserved space just stretches the header. */
+body.has-main-menu #header {
+    padding-block-end: 0;
 }
 
 #header h1 {

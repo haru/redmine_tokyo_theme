@@ -8,6 +8,8 @@
 
 [redmine.tokyo](https://redmine.tokyo/) コミュニティで使用されているテーマです
 
+対応するRedmineのバージョンは7以上です。
+
 ## 使い方
 
 1. このリポジトリをクローンまたはダウンロードします
@@ -17,7 +19,7 @@
 
 ## English Summary
 
-Redmine Tokyo Theme is the official theme used by the [Redmine Tokyo](https://redmine.tokyo/) user community. The theme is built with plain static files (no build process required), making it easy to install and compatible with multiple Redmine versions. Simply copy to `themes/redmine_tokyo_theme` in your Redmine installation and select it from the administration settings.
+Redmine Tokyo Theme is the official theme used by the [Redmine Tokyo](https://redmine.tokyo/) user community. The theme is built with plain static files (no build process required), making it easy to install and compatible with multiple Redmine versions. It supports Redmine 7 and later. Simply copy to `themes/redmine_tokyo_theme` in your Redmine installation and select it from the administration settings.
 
 ## ライセンス 📄
 

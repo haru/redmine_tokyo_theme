@@ -7,12 +7,28 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
       "mcp__playwright__browser_fill_form",
       "mcp__playwright__browser_tabs",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://browserless:3000/json/version)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://app:3000/)",
       "WebFetch(domain:claude.ai)",
       "WebFetch(domain:linear.app)",
       "WebFetch(domain:plane.so)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://browserless:3000/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://browserless:3000/)",
+      "Bash(env)",
+      "Bash(find /workspaces/redmine_tokyo_theme/.claude -maxdepth 3 2>/dev/null; echo \"---\"; find /workspaces/.claude/plugins -maxdepth 2 -iname \"*skill*\" 2>/dev/null | head -20; echo \"---user skills---\"; find ~/.claude/skills -maxdepth 2 2>/dev/null)",
+      "Read(//workspaces/.claude/plugins/**)",
+      "Read(//workspaces/.claude/**)",
+      "Bash(mkdir -p /workspaces/redmine_tokyo_theme/.claude/skills/redmine-login && ls /workspaces/redmine_tokyo_theme/.claude/)",
+      "Edit(/.claude/skills/redmine-login/**)",
+      "Bash(curl:*)",
+      "Bash(perl -0777 -ne 'print $1 if /\\(<div id=\"header\">.*?<\\\\/div>\\\\s*<div id=\"quick-search\">.*?<h1>.*?<\\\\/h1>\\\\s*<\\\\/div>\\)/s' mypage.html)",
+      "Bash(python3 -)",
+      "Bash(find / -maxdepth 6 -iname \"*redmine_tokyo_theme*\")",
+      "Bash(find / -maxdepth 8 -path \"*themes*\" -iname \"*tokyo*\")",
+      "mcp__playwright__browser_run_code_unsafe"
+    ],
+    "additionalDirectories": [
+      "/workspaces/redmine_tokyo_theme/.claude/skills"
     ]
+  },
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true
   }
 }
