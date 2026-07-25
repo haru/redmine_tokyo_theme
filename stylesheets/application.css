@@ -899,6 +899,11 @@ div.issue {
 /* Material Design refresh overrides (CSS only)       */
 /* -------------------------------------------------- */
 
+/* Issue prev/next navigation */
+div.issue .next-prev-links .pagination ul.pages li {
+    border: none;
+}
+
 body {
     background: var(--md-surface);
     color: var(--md-text);
